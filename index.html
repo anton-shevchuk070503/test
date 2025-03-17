@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://source.unsplash.com/1600x900/?nature') no-repeat center center/cover;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            color: white;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #ff4b2b, #ff416c);
+            transform: scale(1.05);
+        }
+
+        #surprise-img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <button id="show-surprise">Натисни мене</button>
+    <img id="surprise-img" class="hidden" src="/image/memi-klev-club-p1wt-p-memi-kot-ulibaetsya-6.jpg" alt="Сюрприз">
+    <audio id="surprise-audio" class="hidden" src="/image/Voicy_Loud Moaning.mp3"></audio>
+</div>
+
+<script>
+    document.getElementById('show-surprise').addEventListener('click', function() {
+        document.getElementById('show-surprise').classList.add('hidden'); 
+        document.getElementById('surprise-img').classList.remove('hidden'); 
+        document.getElementById('surprise-audio').play(); 
+    });
+</script>
+
+</body>
+</html>
